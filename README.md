@@ -8,6 +8,7 @@
 
 | 目录 / 链接 | 说明 |
 | --- | --- |
+| `projects/smart-aquarium` | STM32 智能鱼缸：水质监测、投喂换水、ESP8266 上报 |
 | `projects/smart-site-safety` | 智慧工地安全帽检测 + 人体姿态预警 |
 | `projects/campus-sport` | 高校体育馆预约、器材借用和管理后台 |
 | `projects/student-manager` | Java Swing + MySQL 学生信息管理（课程小项目） |
@@ -23,5 +24,6 @@
 - 本机路径、数据库真实密码
 - 体育馆系统的本地上传图片（`files/`，约 160MB）
 - 完整训练数据集
+- 阿里云物联网平台真实 ProductKey / 设备密钥（鱼缸固件里只留占位）
 
 演示账号都是虚构的，例如 `admin / admin`、`zhangsan / 123`。克隆后请改成你自己的本地配置，不要把真实密码提交回来。

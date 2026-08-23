@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>简历模板</title>
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --muted: #5c5c5c;
+      --line: #d6d6d6;
+      --bg: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ececec;
+      color: var(--ink);
+      font: 12px/1.55 "Source Han Sans SC", "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 16px auto;
+      padding: 16mm 16mm 14mm;
+      background: var(--bg);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .intent {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact {
+      text-align: right;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .placeholder {
+      color: #9a9a9a;
+      border-bottom: 1px dashed #bbb;
+    }
+
+    section { margin-top: 14px; }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 3px;
+    }
+
+    .edu, .skills {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2px 16px;
+    }
+
+    .skills { grid-template-columns: 72px 1fr; }
+
+    .skills dt {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .skills dd { margin: 0 0 4px; }
+
+    .job {
+      margin: 0 0 10px;
+    }
+
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .job-head h3 {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .meta {
+      color: var(--muted);
+      white-space: nowrap;
+      font-size: 12px;
+    }
+
+    .stack {
+      margin: 1px 0 3px;
+      color: var(--muted);
+      font-size: 11.5px;
+    }
+
+    .job p {
+      margin: 0 0 3px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.15em;
+    }
+
+    li { margin: 1px 0; }
+
+    footer.hint {
+      margin-top: 18px;
+      color: #8a8a8a;
+      font-size: 11px;
+    }
+
+    @media print {
+      html, body { background: #fff; }
+      .page {
+        margin: 0;
+        min-height: auto;
+        padding: 12mm 14mm;
+        box-shadow: none;
+      }
+      footer.hint { display: none; }
+      .placeholder { color: #888; border-bottom: none; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <div>
+        <h1><span class="placeholder">【姓名】</span></h1>
+        <p class="intent">求职意向：<span class="placeholder">【开发 / 测试 / 实施 / 嵌入式】</span></p>
+      </div>
+      <div class="contact">
+        <div>电话 <span class="placeholder">【手机号】</span></div>
+        <div>邮箱 <span class="placeholder">【邮箱】</span></div>
+        <div>GitHub <a href="https://github.com/h1neolzr7f">github.com/h1neolzr7f</a></div>
+        <div>作品集 <a href="https://github.com/h1neolzr7f/dev-portfolio">dev-portfolio</a></div>
+      </div>
+    </header>
+
+    <section>
+      <h2>教育经历</h2>
+      <div class="edu">
+        <div>
+          <strong><span class="placeholder">【学校】</span></strong>
+          · <span class="placeholder">【专业 · 本科】</span>
+        </div>
+        <div class="meta"><span class="placeholder">【2022.09 – 2026.06】</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>专业技能</h2>
+      <dl class="skills">
+        <dt>语言</dt>
+        <dd>Python、Java、JavaScript / TypeScript、SQL</dd>
+        <dt>后端</dt>
+        <dd>Spring Boot、MyBatis-Plus、FastAPI、MySQL、SQLite、Sa-Token / JWT</dd>
+        <dt>前端</dt>
+        <dd>Vue 3、React、Pinia、Element Plus、Streamlit</dd>
+        <dt>其他</dt>
+        <dd>STM32 / Keil、YOLO / OpenCV、Windows 安装包与 Android 侧载分发、Git / GitHub</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>项目经历</h2>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>智能鱼缸控制系统</h3>
+          <div class="meta">独立开发 · 2026.03 – 2026.05</div>
+        </div>
+        <p class="stack">C · STM32F103C8T6 · Keil · ESP8266 MQTT</p>
+        <p>本地采集水温、pH、浊度、光照，超限报警并控制加热、灯光、换水和自动投喂；数据经 WiFi 报到云平台。</p>
+        <ul>
+          <li>DS18B20 + ADC 采集，OLED 显示；三个按键改阈值和投喂 / 换水周期。</li>
+          <li>阈值联动加热、灯光、蜂鸣和继电器换水；步进电机定时投喂。</li>
+          <li>ESP8266 MQTT 上报属性，订阅远端手动投喂等指令。密钥不入库。</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>智慧工地人员安全行为识别与预警系统</h3>
+          <div class="meta">独立开发 · 2026.05 – 2026.06</div>
+        </div>
+        <p class="stack">Python · Ultralytics YOLO · OpenCV · Streamlit</p>
+        <p>施工现场安全监测：对图片、文件夹和摄像头实时画面做安全帽检测，并结合人体姿态判断危险俯身、疑似倒地。</p>
+        <ul>
+          <li>YOLO 两类检测 head / helmet，约 1.06 万张训练图，Precision 0.917、Recall 0.830、mAP@50 0.885。</li>
+          <li>接入 YOLO Pose 17 关键点，用躯干倾角和人体宽高比识别危险俯身、疑似倒地。</li>
+          <li>做成可演示页面：图片 / 批量 / 实时监测、模型切换、预警管理和 CSV / Excel 导出。</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>高校体育馆场地预约与器材管理系统</h3>
+          <div class="meta">独立开发 · 2026.04 – 2026.05</div>
+        </div>
+        <p class="stack">Spring Boot · Vue 3 · MySQL · Sa-Token · ECharts</p>
+        <p>用户端完成场地预约、支付、签到、结算、评价和器材借用；管理端维护场地、订单并查看实时报表。</p>
+        <ul>
+          <li>BCrypt 校验密码，JWT 签发 token，按角色下发菜单和按钮权限；前端动态挂载后台路由。</li>
+          <li>打通预约闭环，取消未完成预约时释放时段；器材借用扣库存、归还回库存。</li>
+          <li>管理端实时数据报表，支持手动刷新和 30 秒自动刷新。</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>本地 NovelAI 创作工作台</h3>
+          <div class="meta">独立开发 · 2026.08</div>
+        </div>
+        <p class="stack">Python · FastAPI · SQLite · React / TypeScript · Windows 一键包</p>
+        <p>本地图库、Prompt 资产、角色换角、批量出图和后处理，做成可安装的桌面工作台。非官方项目。</p>
+        <ul>
+          <li>SQLite 全文检索和标签图谱，支持拖入文件夹和元数据校验。</li>
+          <li>付费出图走持久化任务队列：参数一次冻结，失败不盲目重试。</li>
+          <li>Windows DPAPI 保护密钥；拿不到会话令牌就不写入。</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <footer class="hint">
+      灰色虚线是占位，填上姓名、电话、邮箱、学校后，用浏览器「打印 → 另存为 PDF」。投游戏/前端岗可把「樱夜·尸潮」换上最后一项；软件岗可把鱼缸换成错题本。
+    </footer>
+  </article>
+</body>
+</html>

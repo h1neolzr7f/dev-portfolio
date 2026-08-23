@@ -1,0 +1,13 @@
+firmware/Output/
+firmware/User/Listings/
+firmware/User/DebugConfig/
+firmware/User/*.uvguix.*
+firmware/User/JLinkLog.txt
+firmware/User/JLinkSettings.ini
+firmware/User/*.uvoptx
+*.crf
+*.o
+*.d
+*.hex
+*.axf
+*.bak

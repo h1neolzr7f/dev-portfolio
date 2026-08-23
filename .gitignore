@@ -22,3 +22,9 @@ projects/campus-sport/files/**
 projects/campus-sport/web/
 projects/campus-sport/WEB-INF/
 projects/campus-sport/front/dist/
+resume/我的简历.html
+resume/我的简历.pdf
+projects/smart-aquarium/firmware/Output/
+projects/smart-aquarium/firmware/User/Listings/
+projects/smart-aquarium/firmware/User/*.uvguix.*
+projects/smart-aquarium/firmware/User/JLinkLog.txt
