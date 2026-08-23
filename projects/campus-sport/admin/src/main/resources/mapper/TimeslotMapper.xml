@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.project.mapper.TimeslotMapper">
+
+    <resultMap id="timeSlotResultMap" type="com.example.project.entity.TimeSlotDto">
+        <result column="id" property="id" />
+        <result column="time" property="time" />
+        <result column="selected" property="selected" />
+        <result column="state_radio" property="stateRadio" />
+    </resultMap>
+
+    <select id="selectTimeSlotList" resultMap="timeSlotResultMap">
+        SELECT s.id,CONCAT(s.book_date, ' ', t.name) AS TIME,
+           FALSE AS selected,state_radio
+        FROM timeslot s
+            INNER JOIN timetable t ON s.timetable_id = t.id
+        WHERE  area_id= #{areaId}
+    </select>
+</mapper>

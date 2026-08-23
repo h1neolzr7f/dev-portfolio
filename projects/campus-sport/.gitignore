@@ -1,0 +1,10 @@
+node_modules/
+target/
+.idea/
+*.log
+*.iml
+front/dist/
+files/**
+!files/README.md
+web/
+WEB-INF/

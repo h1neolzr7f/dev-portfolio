@@ -1,0 +1,39 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sport-manage?serverTimezone=GMT%2b8
+    username: root
+    password: change-me
+    hikari:
+      minimum-idle: 10
+      connection-test-query: SELECT 1
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+    servlet:
+      load-on-startup: 1
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 100MB
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+sa-token:
+  token-name: Authorization
+  timeout: 7200
+  is-concurrent: true
+  is-share: true
+  is-log: false
+  token-prefix: Bearer
+  jwt-secret-key: change-this-local-jwt-secret
+
+file:
+  download:
+    ip: localhost
