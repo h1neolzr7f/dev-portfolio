@@ -31,3 +31,5 @@ java -cp "out;lib/*" com.tzz.student.StudentManagerApp
 ## 技术栈
 
 Java、Swing、JDBC、MySQL
+
+独立开源仓：[student-manager](https://github.com/h1neolzr7f/student-manager)

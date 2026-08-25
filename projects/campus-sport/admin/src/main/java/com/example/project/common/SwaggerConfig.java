@@ -34,7 +34,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
         return new ApiInfoBuilder()
                 .title("RestAPI接口文档")
                 .description("Restful 后台接口汇总")
-                .contact(new Contact("社区互动信息平台", "https://5w.fit/fogXs", "xqnode@163.com"))
+                .contact(new Contact("campus-sport", "https://github.com/h1neolzr7f/campus-sport", ""))
                 .version("1.0")
                 .build();
     }

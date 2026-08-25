@@ -56,3 +56,5 @@ python train.py
 ## 技术栈
 
 Python、Ultralytics YOLO、OpenCV、Streamlit、Pandas
+
+独立开源仓：[smart-site-safety](https://github.com/h1neolzr7f/smart-site-safety)

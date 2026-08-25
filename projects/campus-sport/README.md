@@ -28,6 +28,8 @@
 Spring Boot 2.7、MyBatis-Plus、Sa-Token、MySQL / MariaDB  
 Vue 3、Vite、Pinia、Element Plus、ECharts、Axios
 
+独立开源仓：[campus-sport](https://github.com/h1neolzr7f/campus-sport)
+
 ## 本地运行
 
 需要 JDK 8、Maven、Node.js、MySQL 或 MariaDB。

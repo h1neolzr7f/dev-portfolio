@@ -9,9 +9,9 @@
 | 目录 / 链接 | 说明 |
 | --- | --- |
 | `projects/smart-aquarium` | STM32 智能鱼缸：水质监测、投喂换水、ESP8266 上报 |
-| `projects/smart-site-safety` | 智慧工地安全帽检测 + 人体姿态预警 |
-| `projects/campus-sport` | 高校体育馆预约、器材借用和管理后台 |
-| `projects/student-manager` | Java Swing + MySQL 学生信息管理（课程小项目） |
+| [smart-site-safety](https://github.com/h1neolzr7f/smart-site-safety) | 智慧工地安全帽检测 + 人体姿态预警（独立开源仓） |
+| [campus-sport](https://github.com/h1neolzr7f/campus-sport) | 高校体育馆预约、器材借用和管理后台（独立开源仓） |
+| [student-manager](https://github.com/h1neolzr7f/student-manager) | Java Swing + MySQL 学生信息管理（独立开源仓） |
 | [NaiXueZhang-Studio-Upgrade](https://github.com/h1neolzr7f/NaiXueZhang-Studio-Upgrade) | 本地 NovelAI 创作工作台 |
 | [dingzhen-notebook](https://github.com/h1neolzr7f/dingzhen-notebook) | 本地错题整理工具 |
 | [sakurayo-zombietide](https://github.com/h1neolzr7f/sakurayo-zombietide) | 离线 Roguelite 射击（游戏 / 前端岗） |
