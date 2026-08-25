@@ -1,35 +1,33 @@
 # 学生信息管理系统
 
-课程实验整理后的桌面小工具：用 Java Swing 做界面，JDBC + MySQL 做增删改查。适合作为简历里的课程项目，不建议和另外两个完整系统并列成主项目。
+Java 课设。Swing 做窗口，JDBC 连 MySQL，增删改查。简历上当课程作业写就行，不必跟另外两个系统抢位置。
 
-## 功能
+## 能做什么
 
-- 新增、修改、按学号删除
-- 查询全部、查询成年学生
-- 表单校验（必填、年龄范围）
-- SQL 全部使用 `PreparedStatement`，避免拼接注入
-- 数据库连接从 `db.properties` 或环境变量读取，不再写死在代码里
+- 按学号增、改、删
+- 查全部，或只看成学年纪
+- 学号必填，年龄有范围
+- SQL 都走 `PreparedStatement`，不拼字符串
+- 库账号放 `db.properties` 或环境变量，没写死在代码里
 
 ## 运行
 
-1. 安装 JDK 8+ 和 MySQL，导入 `schema.sql`。
+1. JDK 8+、MySQL，导入 `schema.sql`。
 2. 复制 `db.properties.example` 为 `db.properties`，改成你的账号。
-3. 把 MySQL Connector/J 放到 `lib/mysql-connector-j.jar`。
-4. 编译并启动：
+3. MySQL Connector/J 放到 `lib/mysql-connector-j.jar`。
+4. 运行：
 
 ```powershell
 .\run.ps1
 ```
 
-或手动执行：
+或：
 
 ```powershell
 javac -encoding UTF-8 -cp "lib/*" -d out src/com/tzz/student/**/*.java src/com/tzz/student/*.java
 java -cp "out;lib/*" com.tzz.student.StudentManagerApp
 ```
 
-## 技术栈
-
 Java、Swing、JDBC、MySQL
 
-独立开源仓：[student-manager](https://github.com/h1neolzr7f/student-manager)
+单独仓库：[student-manager](https://github.com/h1neolzr7f/student-manager)
