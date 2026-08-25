@@ -1,24 +1,24 @@
 # 智能鱼缸控制系统
 
-STM32F103C8T6 上的固件。板子自己采水温、pH、浊度、光照，结果打在 OLED 上。超了就叫，并控制加热、灯光、换水和喂食。ESP8266 用 MQTT 把数据送到云上。
+基于 STM32F103C8T6 的嵌入式固件。系统采集水温、pH、浊度与光照，在 OLED 上显示，并按阈值控制加热、照明、换水与自动投喂。ESP8266 通过 MQTT 将数据上报至云平台。
 
-仓库里没有姓名、学号，也没有云平台密钥。
+本仓库不包含真实姓名、学号及云平台密钥。
 
-## 能做什么
+## 功能
 
-- DS18B20 测水温，太低就开加热棒
-- ADC 读 pH、浊度、光照，超限蜂鸣器响
-- 光线不够会开灯
-- 到点或超限时继电器换水，步进电机喂食
-- 三个键改阈值和喂食 / 换水间隔
-- 连上阿里云后定时上报，APP 能手动喂一次
-- 没有液位传感器，补水靠远程或按键
+- DS18B20 测量水温，低于下限时启动加热棒
+- ADC 采集 pH、浊度与光照，超限时蜂鸣器报警
+- 光照不足时开启照明
+- 定时或超限时由继电器执行换水，步进电机执行投喂
+- 三键本地设置阈值及投喂 / 换水周期
+- 接入阿里云物联网平台后定时上报，并可接收远程投喂指令
+- 不含液位传感器，补水由远程或按键控制
 
-## 打开工程
+## 编译
 
-Keil uVision 5 打开 `firmware/User/程序.uvprojx`，芯片选 `STM32F103C8`。编译结果在 `firmware/Output/`，这个目录不提交。
+使用 Keil uVision 5 打开 `firmware/User/程序.uvprojx`，目标器件为 `STM32F103C8`。编译输出位于 `firmware/Output/`，该目录不纳入版本库。
 
-要连云的话，改 `firmware/Driver/esp8266.h` 里这些占位：
+连接云平台前，请将 `firmware/Driver/esp8266.h` 中的占位符替换为控制台中的实际参数：
 
 - `ProductKey`
 - `DeviceName`
@@ -26,7 +26,7 @@ Keil uVision 5 打开 `firmware/User/程序.uvprojx`，芯片选 `STM32F103C8`�
 - `Password`（设备密钥）
 - `mqttHostUrl`
 
-填好的密钥别再提交回来。
+请勿将填入真实密钥后的文件提交回仓库。
 
 ## 引脚
 
@@ -42,18 +42,18 @@ Keil uVision 5 打开 `firmware/User/程序.uvprojx`，芯片选 `STM32F103C8`�
 | 出水 / 进水继电器 | PB3 / PB4 |
 | 蜂鸣器 | PB5 |
 | 加热 | PB10 |
-| 灯光 | PA15 |
+| 照明 | PA15 |
 | 按键 | PB12–PB14 |
 
-## 目录
+## 目录结构
 
 ```
 firmware/
-  User/       主循环、Keil 工程
+  User/       主程序与 Keil 工程
   Driver/     传感器、电机、OLED、ESP8266
-  System/     延时、串口
+  System/     延时与串口
   CMSIS/      Cortex-M3 启动文件
   Libraries/  STM32 标准外设库
 ```
 
-C、STM32F103、Keil MDK、ESP8266 MQTT、DS18B20、OLED、28BYJ-48
+**技术栈** C、STM32F103、Keil MDK、ESP8266 MQTT、DS18B20、OLED、28BYJ-48

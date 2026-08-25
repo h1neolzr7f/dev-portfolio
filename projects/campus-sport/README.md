@@ -1,37 +1,37 @@
 # 高校体育馆场地预约与器材管理系统
 
-学生订场地、付钱、签到、结算、评价，也能借器材。后台改场地、时段和订单，还有一页报表。
+用户端提供场地预约、支付、签到、结算、评价及器材借用。管理端维护场地、时段与订单，并提供数据报表。
 
-## 学生端
+## 用户端
 
-- 注册登录，看公告和教学视频
-- 搜场地、约时段、支付、签到、离场结算、评价
-- 借器材、还器材，库存跟着变
+- 注册与登录，浏览公告及教学视频
+- 场地检索、时段预约、支付、签到、离场结算与评价
+- 器材浏览、借用与归还，库存随操作更新
 
 ## 管理端
 
 - 用户、场地、订单、评价、公告、轮播图
-- 时段、维护、支付方式
-- 器材库存和借用记录
-- 报表：数字卡片、状态分布、热度、最近订单
+- 时段、维护计划、支付方式
+- 器材库存与借用记录
+- 报表：统计卡片、状态分布、场地热度、最近订单
 
-登录用 BCrypt 校验密码，再发 JWT。菜单和按钮按角色给。前端把 token 放 Pinia，后台路由登录后再挂上去。
+认证采用 BCrypt 校验密码，登录后签发 JWT。菜单与按钮权限按角色分配。前端以 Pinia 保存 token 与权限，后台路由在登录后动态注册。
 
-## 技术
+## 技术栈
 
 Spring Boot 2.7、MyBatis-Plus、Sa-Token、MySQL / MariaDB  
 Vue 3、Vite、Pinia、Element Plus、ECharts、Axios
 
-单独仓库：[campus-sport](https://github.com/h1neolzr7f/campus-sport)
+独立仓库：[campus-sport](https://github.com/h1neolzr7f/campus-sport)
 
-## 怎么跑
+## 运行环境
 
-需要 JDK 8、Maven、Node.js，以及 MySQL 或 MariaDB。
+JDK 8、Maven、Node.js，以及 MySQL 或 MariaDB。
 
-1. 建库 `sport-manage`，导入 SQL。器材、活动那些表不够的话，再跑 `scripts/install-equipment-module.ps1` 这类补丁。
-2. 把 `admin/src/main/resources/application.yml.example` 复制成 `application.yml`，改成你的数据库账号。真密码别提交。
-3. 场地图片放本地 `files/`，这个目录不进 Git。
-4. 后端：
+1. 创建数据库 `sport-manage` 并导入 SQL。若缺少器材或活动相关表，执行 `scripts/install-equipment-module.ps1` 等补丁脚本。
+2. 将 `admin/src/main/resources/application.yml.example` 复制为 `application.yml`，填写本地数据库账号。请勿提交真实口令。
+3. 场地图片存放于本地 `files/`，该目录不纳入版本库。
+4. 启动后端：
 
 ```powershell
 cd admin
@@ -39,7 +39,7 @@ mvn -DskipTests package
 java -jar target/boot.jar
 ```
 
-5. 前端：
+5. 启动前端：
 
 ```powershell
 cd front
@@ -49,8 +49,8 @@ npm run dev
 
 - 前端：`http://localhost:7000`
 - 后端：`http://localhost:9090`
-- 演示账号：`admin / admin`，普通用户 `zhangsan / 123`
+- 演示账号：管理员 `admin / admin`，普通用户 `zhangsan / 123`
 
-也可以用 `scripts/start-db.ps1`、`scripts/start-backend.ps1`、`scripts/start-frontend.ps1`。本机得先有数据库。`scripts/Resolve-Mysql.ps1` 会找 PATH 里的 `mysql` / `mariadb`。
+亦可使用 `scripts/start-db.ps1`、`scripts/start-backend.ps1`、`scripts/start-frontend.ps1`。数据库服务需已启动。`scripts/Resolve-Mysql.ps1` 将优先使用 PATH 中的 `mysql` / `mariadb`。
 
-点哪里、看什么，写在 `演示手册.md`。
+操作步骤见 `演示手册.md`。

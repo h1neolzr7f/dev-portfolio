@@ -205,11 +205,11 @@
           <div class="meta">独立开发 · 2026.03 – 2026.05</div>
         </div>
         <p class="stack">C · STM32F103C8T6 · Keil · ESP8266 MQTT</p>
-        <p>板子本地读水温、pH、浊度、光照。超限就报警，并控制加热、灯光、换水和喂食。连上 WiFi 后把数据推到云上。</p>
+        <p>采集水温、pH、浊度与光照，超限报警并控制加热、照明、换水与自动投喂；经 WiFi 将数据上报至云平台。</p>
         <ul>
-          <li>DS18B20 和三路 ADC，结果打在 OLED；三个键改阈值和喂食 / 换水间隔。</li>
-          <li>温度低开加热，光线不够开灯；超限换水，到点用步进电机喂食。</li>
-          <li>ESP8266 用 MQTT 上报，手机也能手动喂一次。云平台密钥没有提交。</li>
+          <li>DS18B20 与三路 ADC 采集，结果在 OLED 显示；三键设置阈值及投喂 / 换水周期。</li>
+          <li>低温启动加热，光照不足开启照明；超限换水，定时由步进电机投喂。</li>
+          <li>ESP8266 以 MQTT 上报数据并接收远程投喂指令。云平台密钥未纳入仓库。</li>
         </ul>
       </article>
 
@@ -219,11 +219,11 @@
           <div class="meta">独立开发 · 2026.05 – 2026.06</div>
         </div>
         <p class="stack">Python · Ultralytics YOLO · OpenCV · Streamlit</p>
-        <p>看图、看文件夹或看摄像头，先判断有没有戴安全帽，再看人是不是弯太狠、像不像摔倒。</p>
+        <p>对图像、文件夹与摄像头画面进行安全帽检测，并结合人体姿态识别危险俯身与疑似倒地。</p>
         <ul>
-          <li>YOLO 两类 head / helmet，大约 1.06 万张训练图，Precision 0.917，Recall 0.830，mAP@50 0.885。</li>
-          <li>Pose 出 17 个点，用躯干倾角和框的宽高比判断俯身和疑似倒地。</li>
-          <li>Streamlit 页面能切模型、记预警，结果导出 CSV / Excel。</li>
+          <li>YOLO 检测 head / helmet，约 1.06 万张训练图像，Precision 0.917，Recall 0.830，mAP@50 0.885。</li>
+          <li>基于 Pose 17 个关键点，以躯干倾角与包围框宽高比判定姿态。</li>
+          <li>Streamlit 页面支持模型切换、预警管理及 CSV / Excel 导出。</li>
         </ul>
       </article>
 
@@ -233,11 +233,11 @@
           <div class="meta">独立开发 · 2026.04 – 2026.05</div>
         </div>
         <p class="stack">Spring Boot · Vue 3 · MySQL · Sa-Token · ECharts</p>
-        <p>学生订场地、付钱、签到、结算、评价，也能借器材。后台改场地和订单，另有一页报表。</p>
+        <p>用户端完成场地预约、支付、签到、结算、评价与器材借用；管理端维护场地、订单并查看报表。</p>
         <ul>
-          <li>密码 BCrypt，登录后发 JWT；菜单和按钮按角色给，后台路由登录后再挂。</li>
-          <li>取消没走完的预约会把时段腾出来；借器材扣库存，还了加回去。</li>
-          <li>报表能手动刷，也可以 30 秒刷一次。</li>
+          <li>BCrypt 校验密码，JWT 签发 token；按角色分配菜单与按钮，后台路由登录后注册。</li>
+          <li>取消未完成预约时释放时段；器材借用扣减库存，归还后恢复。</li>
+          <li>管理端报表支持手动刷新与 30 秒自动刷新。</li>
         </ul>
       </article>
 
@@ -247,18 +247,18 @@
           <div class="meta">独立开发 · 2026.08</div>
         </div>
         <p class="stack">Python · FastAPI · SQLite · React / TypeScript · Windows 一键包</p>
-        <p>自己用的本地出图台：图库、提示词、换角、批量出图。不是官方软件。</p>
+        <p>本地图库、提示词管理、角色换角与批量出图。非官方项目。</p>
         <ul>
-          <li>SQLite 能搜提示词和标签，文件夹可以拖进去。</li>
-          <li>付费出图排队，参数写死，失败不会自己狂着重试。</li>
-          <li>密钥用 Windows DPAPI 收着，没拿到会话就不写盘。</li>
+          <li>基于 SQLite 检索提示词与标签，支持文件夹导入。</li>
+          <li>付费出图采用持久化队列，参数入队后固定，失败不自动重试。</li>
+          <li>密钥由 Windows DPAPI 保护；未获得会话令牌时不写入磁盘。</li>
         </ul>
       </article>
 
     </section>
 
     <footer class="hint">
-      灰色虚线是占位。填好后用浏览器打印成 PDF。投游戏或前端，最后一项可以换成樱夜·尸潮；投软件可以把鱼缸换成错题本。
+      灰色虚线为占位。填写后使用浏览器打印为 PDF。游戏 / 前端岗位可将末项替换为「樱夜·尸潮」；软件岗位可将鱼缸替换为错题工具。
     </footer>
   </article>
 </body>
