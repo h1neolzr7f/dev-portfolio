@@ -20,11 +20,13 @@
 
 [源码与说明](https://github.com/h1neolzr7f/dingzhen-notebook) · [Windows / Android 下载](https://github.com/h1neolzr7f/dingzhen-notebook/releases) · [测试工作流](https://github.com/h1neolzr7f/dingzhen-notebook/blob/main/.github/workflows/tests.yml)
 
-### [Manga Editor Desu · NAI](https://github.com/h1neolzr7f/Manga-Editor-Desu-NAI)
+### [Manga-NAI-GPT](https://github.com/h1neolzr7f/Manga-NAI-GPT)
 
-基于 [new-sankaku/manga-editor-desu](https://github.com/new-sankaku/manga-editor-desu) 的 GPL-3.0 修改发行版。分镜、气泡、图层和多页工程来自上游；本版本增加 NovelAI 接入、Windows 启动器、模拟器工作区和可选本地抠图等功能。
+新手友好的漫画修图 / 嵌字工具：换角色、改字幕、去字、分层、本机 AI（CPU）与自备 GPT-image / NovelAI。面向最少步骤完成修图。
 
-[源码与归属说明](https://github.com/h1neolzr7f/Manga-Editor-Desu-NAI) · [Windows 下载](https://github.com/h1neolzr7f/Manga-Editor-Desu-NAI/releases) · [相对上游的改动](https://github.com/h1neolzr7f/Manga-Editor-Desu-NAI/blob/main/CHANGELOG.md)
+[源码与说明](https://github.com/h1neolzr7f/Manga-NAI-GPT) · [Release](https://github.com/h1neolzr7f/Manga-NAI-GPT/releases/latest) · [上手指南](https://github.com/h1neolzr7f/Manga-NAI-GPT/blob/main/docs/QUICK_START_BEGINNER.md)
+
+历史 / NovelAI 线：[Manga-Editor-Desu-NAI](https://github.com/h1neolzr7f/Manga-Editor-Desu-NAI)（上游 [manga-editor-desu](https://github.com/new-sankaku/manga-editor-desu) 的 GPL-3.0 改版与旧 Windows 发行）。
 
 这些工具均为非官方项目，与所涉及的第三方平台没有隶属关系。使用范围和第三方内容权利请参阅各项目说明。
 
@@ -42,6 +44,6 @@
 
 ## 仓库与运行数据
 
-本仓库保存智能鱼缸代码，其余项目在独立仓库维护。Nai学长工作室的当前维护线为 `NaiXueZhang-Studio-Upgrade`，v1.4 保留在 `NaiXueZhang-Studio`；樱夜·尸潮的玩家入口为 `sakurayo-zombietide`，开发仓为 `sakurayo-v46-handoff`。
+本仓库保存智能鱼缸代码，其余项目在独立仓库维护。漫画修图当前主线为 `Manga-NAI-GPT`，NovelAI 历史线为 `Manga-Editor-Desu-NAI`。Nai学长工作室的当前维护线为 `NaiXueZhang-Studio-Upgrade`，v1.4 保留在 `NaiXueZhang-Studio`；樱夜·尸潮的玩家入口为 `sakurayo-zombietide`，开发仓为 `sakurayo-v46-handoff`。
 
 公开署名使用 GitHub 账号。仓库不收录真实身份信息、设备密钥、私人运行数据和完整训练数据集。演示账号只用于本地运行，部署前请修改配置，不要提交真实口令。
