@@ -22,7 +22,7 @@
 
 ### [Manga-NAI-GPT](https://github.com/h1neolzr7f/Manga-NAI-GPT)
 
-新手友好的漫画修图 / 嵌字工具：换角色、改字幕、去字、分层、本机 AI（CPU）与自备 GPT-image / NovelAI。面向最少步骤完成修图。
+新手友好的漫画修图 / 嵌字工具（当前 v1.5.0）：换角色、改字幕、改一块、分层、粘贴剧本成页、角色库、自动对白气泡、PSD 导入导出，本机 AI（CPU）与自备 GPT-image / NovelAI。面向最少步骤完成修图。
 
 [源码与说明](https://github.com/h1neolzr7f/Manga-NAI-GPT) · [Release](https://github.com/h1neolzr7f/Manga-NAI-GPT/releases/latest) · [上手指南](https://github.com/h1neolzr7f/Manga-NAI-GPT/blob/main/docs/QUICK_START_BEGINNER.md)
 
