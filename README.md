@@ -22,7 +22,7 @@
 
 ### [Manga-NAI-GPT](https://github.com/h1neolzr7f/Manga-NAI-GPT)
 
-新手友好的漫画修图 / 嵌字工具（当前 v1.5.0）：换角色、改字幕、改一块、分层、粘贴剧本成页、角色库、自动对白气泡、PSD 导入导出，本机 AI（CPU）与自备 GPT-image / NovelAI。面向最少步骤完成修图。
+一个故事变成漫画（当前 v1.6.12）：粘贴整段故事，AI 导演自动拆页分镜、定角色外貌、出图并嵌字成整章；之后可以换角色、改字幕、改一块、分层、PSD 导入导出。本机 AI（CPU）配合自备 GPT-image / NovelAI。基于 Manga Editor Desu 的个人 fork，独立维护。
 
 [源码与说明](https://github.com/h1neolzr7f/Manga-NAI-GPT) · [Release](https://github.com/h1neolzr7f/Manga-NAI-GPT/releases/latest) · [上手指南](https://github.com/h1neolzr7f/Manga-NAI-GPT/blob/main/docs/QUICK_START_BEGINNER.md)
 
@@ -39,6 +39,7 @@
 | [体育馆预约](https://github.com/h1neolzr7f/campus-sport) | 场地预约、器材借还和管理端报表 | Spring Boot、MySQL、Vue 3 |
 | [学生管理](https://github.com/h1neolzr7f/student-manager) | Java 课程实验，桌面端信息管理 | Java、Swing、JDBC |
 | [樱夜·尸潮](https://github.com/h1neolzr7f/sakurayo-zombietide) | 离线 Roguelite 射击游戏 | Canvas、JavaScript、Android WebView |
+| [边缘图阁 GalleryEdge](https://github.com/h1neolzr7f/GalleryEdge) | 作品索引 + 图形化运维面板（安装、抓取、入库、发布 / 回滚、备份） | Python、TypeScript、SQLite / Turso、Cloudflare Worker |
 
 更多项目说明见[项目经历](./项目经历.md)。
 
